@@ -45,7 +45,7 @@ def contact(request):
                 subject,
                 body,
                 settings.DEFAULT_FROM_EMAIL,  # from email
-                ['basnetaadars123@gmail.com'],      # recipient email (can be same as sender)
+                ['basnetaadars123your email@gmail.com'],      # recipient email (can be same as sender)
                 fail_silently=False,
             )
 
