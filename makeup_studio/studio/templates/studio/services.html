@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Services | Touch of Pragya Makeup Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+body { font-family: 'Poppins', sans-serif; }
+.heading { font-family: 'Playfair Display', serif; }
+</style>
+</head>
+
+<body class="bg-[#fffaf8] text-gray-700">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow-sm fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="heading text-2xl text-rose-500">Touch of Pragya</span>
+    <div class="space-x-6 hidden md:flex">
+      <a href="{% url 'home' %}" class="hover:text-rose-500">Home</a>
+      <a href="{% url 'services' %}" class="text-rose-500 font-semibold">Services</a>
+      <a href="{% url 'portfolio' %}" class="hover:text-rose-500">Portfolio</a>
+      <a href="{% url 'gallery' %}" class="hover:text-rose-500">Gallery</a>
+      <a href="#beforeafter" class="hover:text-rose-500">Transformations</a>
+      <a href="#reviews" class="hover:text-rose-500">Reviews</a>
+      <a href="#about" class="hover:text-rose-500">About</a>
+      <a href="{% url 'contact' %}" class="hover:text-rose-500">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="pt-32 pb-24 bg-gradient-to-r from-[#fff1ec] to-[#fff]">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <h1 class="heading text-5xl text-gray-800 mb-6">Professional Makeup Services</h1>
+      <p class="mb-6">From bridal to editorial shoots, we bring your beauty vision to life.</p>
+      <a href="#contact" class="bg-rose-400 text-white px-8 py-3 rounded-full shadow hover:bg-rose-500 transition">Book Now</a>
+    </div>
+    <img src="{% static 'images/8.jpg' %}" class="rounded-3xl shadow-lg" data-aos="fade-left">
+  </div>
+</section>
+
+<!-- SERVICES LIST -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="heading text-4xl mb-12 text-gray-800" data-aos="fade-up">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up">
+        <h3 class="heading text-xl mb-2 text-rose-500">Bridal Makeup</h3>
+        <p>Luxury bridal makeup to make your wedding day unforgettable. Includes trial sessions and custom looks.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="heading text-xl mb-2 text-rose-500">Party & Event Makeup</h3>
+        <p>Elegant glam for parties, festivals, and special events that make you shine.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="heading text-xl mb-2 text-rose-500">Photoshoots & Fashion</h3>
+        <p>Professional makeup for photoshoots, fashion, editorial, and commercial projects.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="heading text-xl mb-2 text-rose-500">Makeup Workshops</h3>
+        <p>Learn professional makeup techniques from our experienced artists in private or group sessions.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="800">
+        <h3 class="heading text-xl mb-2 text-rose-500">Consultation & Skincare</h3>
+        <p>Get personalized consultation to choose the right makeup and skincare routine for your skin type.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="1000">
+        <h3 class="heading text-xl mb-2 text-rose-500">Special Effects Makeup</h3>
+        <p>Creative SFX and theatrical makeup for events, film, and costume parties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER SECTION -->
+<section class="py-20 bg-[#fff1ec]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="heading text-4xl mb-12 text-gray-800" data-aos="fade-right">Before & After Transformations</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="relative">
+        <img src="{% static 'images/1.jpg' %}" class="rounded-xl shadow">
+        <div class="absolute bottom-2 left-2 bg-rose-400 px-3 py-1 text-white rounded">Before</div>
+      </div>
+      <div class="relative">
+        <img src="{% static 'images/8.jpg' %}" class="rounded-xl shadow">
+        <div class="absolute bottom-2 left-2 bg-rose-400 px-3 py-1 text-white rounded">After</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT REVIEWS -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="heading text-4xl mb-12 text-gray-800" data-aos="fade-up">Client Reviews</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up">
+        <p>“Bridal makeup was amazing and lasted all day!”</p>
+        <span class="block mt-3 text-rose-500">— Rina K.</span>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
+        <p>“Professional and friendly team. Loved my party look.”</p>
+        <span class="block mt-3 text-rose-500">— Sushma P.</span>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="400">
+        <p>“Highly recommend for photoshoots and events.”</p>
+        <span class="block mt-3 text-rose-500">— Anisha B.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / BOOKING -->
+<section class="py-20 text-center">
+  <h2 class="heading text-4xl mb-6 text-gray-800" data-aos="fade-up">Book Your Appointment</h2>
+  <p class="mb-6" data-aos="fade-up" data-aos-delay="100">Schedule a consultation with our professional artists today.</p>
+  <a href="#contact" class="bg-rose-400 text-white px-10 py-3 rounded-full shadow hover:bg-rose-500 transition" data-aos="fade-up" data-aos-delay="200">Book Now</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-white py-14">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="heading text-xl mb-3">Touch of Pragya</h3>
+      <p>Women-owned · LGBTQ+ Friendly</p>
+      <p>Indradev Marg, Bharatpur</p>
+    </div>
+    <div>
+      <h3 class="heading text-xl mb-3">Contact</h3>
+      <p>Instagram: @touchofpragya</p>
+      <p>Phone: +977-XXXXXXXXX</p>
+    </div>
+    <div>
+      <h3 class="heading text-xl mb-3">Opening Hours</h3>
+      <p>Mon – Sat: 10AM – 7PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+  <p class="text-center mt-10 text-gray-400">© 2026 Touch of Pragya Makeup Studio</p>
+</footer>
+
+<script>
+AOS.init({ duration: 1200, once: true });
+</script>
+</body>
+</html>

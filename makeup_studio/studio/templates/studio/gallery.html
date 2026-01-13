@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | Touch of Pragya Makeup Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+body { font-family: 'Poppins', sans-serif; }
+.heading { font-family: 'Playfair Display', serif; }
+</style>
+</head>
+<body class="bg-[#fffaf8] text-gray-700">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow-sm fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <span class="heading text-2xl text-rose-500">Touch of Pragya</span>
+    <div class="space-x-6 hidden md:flex">
+      <a href="{% url 'home' %}" class="hover:text-rose-500">Home</a>
+      <a href="{% url 'services' %}" class="hover:text-rose-500">Services</a>
+      <a href="{% url 'portfolio' %}" class="hover:text-rose-500">Portfolio</a>
+      <a href="{% url 'gallery' %}" class="text-rose-500 font-semibold">Gallery</a>
+      <a href="{% url 'transformations' %}" class="hover:text-rose-500">Transformations</a>
+      <a href="#reviews" class="hover:text-rose-500">Reviews</a>
+      <a href="#about" class="hover:text-rose-500">About</a>
+      <a href="{% url 'contact' %}" class="hover:text-rose-500">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-24 bg-gradient-to-r from-[#fff1ec] to-[#fff]">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <h1 class="heading text-5xl text-gray-800 mb-6">Makeup Gallery</h1>
+      <p class="mb-6">A collection of our finest makeup work, from bridal to editorial, party glam, and creative looks.</p>
+    </div>
+    <img src="{% static 'studio/images/gallery1.jpg' %}" class="rounded-3xl shadow-lg" data-aos="fade-left">
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="heading text-4xl mb-12 text-gray-800" data-aos="fade-up">Our Makeup Creations</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {% comment %} Add as many images as needed {% endcomment %}
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up">
+        <img src="{% static 'studio/images/gallery1.jpg' %}" alt="Bridal Makeup" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
+        <img src="{% static 'studio/images/gallery2.jpg' %}" alt="Party Makeup" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+        <img src="{% static 'studio/images/gallery3.jpg' %}" alt="Editorial Makeup" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="300">
+        <img src="{% static 'studio/images/gallery4.jpg' %}" alt="Creative Makeup" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="400">
+        <img src="{% static 'studio/images/gallery5.jpg' %}" alt="Fashion Shoot" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="500">
+        <img src="{% static 'studio/images/gallery6.jpg' %}" alt="Makeup Trial" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="600">
+        <img src="{% static 'studio/images/gallery7.jpg' %}" alt="Party Glam" class="w-full h-full object-cover">
+      </div>
+      <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition" data-aos="fade-up" data-aos-delay="700">
+        <img src="{% static 'studio/images/gallery8.jpg' %}" alt="Editorial Shoot" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-white py-14">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h3 class="heading text-xl mb-3">Touch of Pragya</h3>
+      <p>Women-owned · LGBTQ+ Friendly</p>
+      <p>Indradev Marg, Bharatpur</p>
+    </div>
+    <div>
+      <h3 class="heading text-xl mb-3">Contact</h3>
+      <p>Instagram: @touchofpragya</p>
+      <p>Phone: +977-XXXXXXXXX</p>
+    </div>
+    <div>
+      <h3 class="heading text-xl mb-3">Opening Hours</h3>
+      <p>Mon – Sat: 10AM – 7PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+  <p class="text-center mt-10 text-gray-400">© 2026 Touch of Pragya Makeup Studio</p>
+</footer>
+
+<script>
+AOS.init({ duration: 1200, once: true });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
